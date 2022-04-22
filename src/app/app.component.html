@@ -1,0 +1,201 @@
+<header id="intro" style="display: block;">
+  <article class="fullheight" style="height: 568px;">
+    <div class="hgroup">
+      <h1>Sen Hotel</h1>
+      <h2>Dakar Sénégal</h2>
+      <p><a href="/#welcome"><img src="../assets/images/arrow.png" alt="down arrow"/></a></p>
+    </div>
+
+  
+
+    
+  </article>
+
+  <div class="scrollmagic-pin-spacer"
+       style="display: block; top: auto; left: auto; bottom: auto; right: auto; position: relative; margin: 0 auto auto;
+       box-sizing: content-box; width: 100%; min-height: 44px; height: auto; padding-top: 0; padding-bottom: 0;" >
+    <nav id="nav" style="position: relative; top: 0; left: 0; bottom: auto; right: auto; width: 100%;">
+      <div class="navbar" >
+        <div class="brand"><a href="/#welcome">Sen <span>Hotel</span></a></div>
+      </div><!-- navbar -->
+    </nav>
+  </div>
+
+
+  
+</header>
+
+<main id="wrapper">
+  <div class="scene" id="welcome">
+    <article class="content">
+
+      <div class="row">
+        <div class="col-12">
+
+          <div class="gallery">
+            <img src="../assets/images/intro_room.jpg" alt="Intro Gallery Room Sample Pictures">
+            <img src="../assets/images/intro_pool.jpg" alt="Intro Gallery Pool Sample Pictures">
+            <img src="../assets/images/intro_dining.jpg" alt="Intro Gallery Dining Sample Pictures">
+            <img src="../assets/images/intro_attractions.jpg" alt="Intro Gallery Attractions Sample Pictures">
+            <img class="hidesm" src="../assets/images/intro_wedding.jpg" alt="Intro Gallery Dining Sample Pictures">
+          </div>
+
+
+          <h1>Réserver une chambre</h1>
+
+          <form class="form-horizontal " [formGroup]="roomsearch" (ngSubmit)="onSubmit(roomsearch)">
+
+            <div class="form-group">
+              <label for="checkin" class="col-4">date d'entrée:</label>
+              <div class="col-8" style="margin: 0 auto">
+              <input type="date" id="checkin" class="form-control" formControlName="checkin">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout" class="col-4">Date de sortie:</label>
+              <div class="col-8" style="margin: 0 auto">
+                <input type="date" id="checkout" class="form-control" formControlName="checkout">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 10px;">
+              <div class="col-offset-2 col-12">
+                <button type="submit" class="btn btn-primary btn-lg">Soumettre</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-12">
+          <div class="table-responsive">
+            <h1>Chambres disponibles</h1>
+            <table class="table">
+              <tbody>
+              <tr *ngFor="let room of rooms">
+                <td>
+                  <img src="../assets/images/intro_room.jpg" alt="Intro Gallery Room Sample Pictures">
+                </td>
+                <td>
+                  <strong>Room #: {{room.roomNumber}}</strong><br>
+                  <strong>Price # ${{room.price}}:</strong>
+                </td>
+                <td>
+                  <button class="btn btn-primary" type="submit" (click)="reserveRoom(room.id)">Reserver</button>
+                </td>
+              </tr>
+              </tbody>
+
+            </table>
+
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </div><!-- welcome -->
+  <div class="scene" id="hotelinfo">
+    <article class="heading">
+      <h1>Informations essentielles</h1>
+    </article>
+    <article id="usefulinfo">
+      <section id="arrivalinfo">
+        <h2>Lorem ipsum</h2>
+        <ul>
+          <li><strong>Depart</strong> 03:00 </li>
+          <li><strong>Arrivée:</strong> 23:00 </li>
+          <li><strong>Parking:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit totam porro magnam amet fuga quisquam soluta similique officia deleniti culpa? Exercitationem vero voluptatem cumque! Illo consequuntur laboriosam voluptate officiis molestiae.
+          </li>
+          <li><strong>lorem ipsum:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi laborum dolorem rem cumque autem fuga architecto! Obcaecati natus nobis beatae facere, ad commodi quas, fuga reprehenderit, maiores dolore alias illo.
+          </li>
+          <li><strong>Trains:</strong> lorem ipsum.</li>
+          <li><strong>Lorem:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nesciunt praesentium deserunt quam voluptas voluptatem voluptate, cum quidem quisquam ea provident esse maiores fuga quod adipisci dolores! Repudiandae, labore maxime!
+          </li>
+        </ul>
+      </section>
+      <section class="checklist" id="services">
+        <h2>Lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed excepturi nisi aliquid qui recusandae, tempora quia sapiente dolores maiores consequuntur maxime eligendi, nostrum harum quae libero consequatur officia? Recusandae, perferendis!.</p>
+        <ul>
+          <li>Lorem</li>
+          <li>Loremr</li>
+          <li>Lorem</li>
+          <li>lorem</li>
+          <li>lorem</li>
+          <li>lorem &amp; lorem</li>
+          <li>lorem</li>
+          <li>lorem</li>
+          <li>lorem</li>
+        </ul>
+      </section>
+      <section class="checklist" id="accessibility">
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime sequi quasi quia illum! Quas sed consectetur iste, vero blanditiis minima porro maiores nemo illum necessitatibus modi debitis beatae tempora est!</p>
+        <ul>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem </li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+        </ul>
+      </section>
+    </article>
+    <article id="greenprogram">
+      <h2>lorem ipsum</h2>
+      <p><strong>Sen Hotel</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto doloribus soluta quaerat dolore inventore magni molestias, sit sed fugiat rerum esse, libero molestiae quo harum! Nesciunt incidunt aut illum eaque..</p>
+    </article>
+  </div><!-- hotelinfo -->
+
+  <div class="scene" id="dining">
+    <article id="areadining">
+      <h1>Diner</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam reiciendis quis vitae unde esse sapiente aspernatur ipsum explicabo quia incidunt asperiores, dolor iure dolores tempore, expedita nulla eos fugiat quaerat? </p>
+    </article>
+    <article id="inhotel">
+      <section id="rooftopcafe">
+        <h2> Cafétaria</h2>
+        <img src="../assets/images/dining_rooftop.jpg" alt="Dining">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam explicabo qui recusandae vero, dicta provident, iure id earum voluptatibus reiciendis repellat veritatis corrupti blanditiis sit quibusdam hic iste rerum velit?.</p>
+      </section>
+
+      <section id="smoothiebar">
+        <h2>Smoothie</h2>
+        <img src="../assets/images/dining_smoothiebar.jpg" alt="Dining">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem fugit praesentium blanditiis nisi dolor asperiores! Dolorem nulla iste voluptatum fugiat quidem iure quaerat explicabo! Laudantium incidunt saepe commodi nisi!.</p>
+      </section>
+
+      <section id="coffeebar">
+        <h2>Dejeuner &amp; Café</h2>
+        <img src="../assets/images/dining_lattes.jpg" alt="Dining">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus deserunt mollitia suscipit enim dolore dignissimos eaque aliquam possimus, eum, id maxime dolorum maiores qui natus totam, culpa alias odit doloribus!</p>
+      </section>
+    </article><!-- inhotel -->
+    <article id="roomservice">
+      <h1> Service</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, accusamus voluptas. Corrupti accusantium, corporis perspiciatis rem totam impedit tempore veritatis. Ipsa ullam sapiente debitis laborum inventore vero voluptatum dolorum atque.</p>
+    </article>
+  </div><!-- dining -->
+
+</main>
+
+<footer class="scene">
+  <article class="content">
+    <div id="socialmedia">
+      <ul class="group">
+        <li><a href="https://twitter.com/"><img class="icon" src="../assets/images/twitter.png"
+                                                alt="icon for twitter"></a></li>
+        <li><a href="http://www.facebook.com/"><img class="icon" src="../assets/images/facebook.png"
+                                                    alt="icon for facebook"></a></li>
+        <li><a href="http://www.youtube.com/"><img class="icon" src="../assets/images/youtube.png" alt="icon for youtube"></a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</footer>
+<script src="../assets/images/script.js"></script>
